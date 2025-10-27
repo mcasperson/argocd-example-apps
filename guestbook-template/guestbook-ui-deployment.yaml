@@ -17,7 +17,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-        - image: gcr.io/google-samples/gb-frontend:#{Octopus.Action.Package[Argo CD].PackageVersion}
+        - image: gcr.io/google-samples/gb-frontend:#{Octopus.Action.Package[gb-frontend].PackageVersion}
           name: guestbook-ui
           ports:
             - containerPort: 80
