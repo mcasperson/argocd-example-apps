@@ -49,3 +49,13 @@ to explore ArgoCD and GitOps!
 [badge_sock_shop]: https://cd.apps.argoproj.io/api/badge?revision=true&name=example.sock-shop
 [app_sync_waves]: https://cd.apps.argoproj.io/applications/example.sync-waves
 [badge_sync_waves]: https://cd.apps.argoproj.io/api/badge?revision=true&name=example.sync-waves
+
+## Octopus
+
+These are the annotations you must add to the applications hosting the environment specific helm guestbook chart:
+
+```yaml
+argo.octopus.com/project: my-argo-cd-app
+argo.octopus.com/environment: development
+argo.octopus.com/image-replace-paths: docker.io/{{ .Values.image.repository }}:{{ .Values.image.tag }}
+```
