@@ -5,8 +5,8 @@
 replicaCount: 1
 
 image:
-  repository: gcr.io/google-samples/gb-frontend
-  tag: "v4"
+  repository: docker.io/nginx
+  tag: "1.21.6"
   pullPolicy: IfNotPresent
 
 containerPort: 80
